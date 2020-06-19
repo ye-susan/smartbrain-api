@@ -16,7 +16,7 @@ const hash = bcrypt.hashSync(password);
 
     db.transaction(trx => {
         trx.insert({
-            hash:hash,
+            hash: hash,
             email: email
         })
         .into('login')
